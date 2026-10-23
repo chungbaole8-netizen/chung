@@ -63,7 +63,7 @@ const delayTime = (ms) => new Promise(resolve => setTimeout(resolve, ms));
     console.log(`\n>>> Đang kết nối an toàn ${tokens.length} tài khoản vào Voice ID: ${VOICE_CHANNEL_ID}...\n`);
 
     for (let index = 0; index < tokens.length; index++) {
-        if (index > 0) await delayTime(5000); // Giãn cách 5s giữa mỗi nick vào voice
+        if (index > 0) await delayTime(5000);
         connectVoice(tokens[index], index, VOICE_CHANNEL_ID);
     }
 })();
